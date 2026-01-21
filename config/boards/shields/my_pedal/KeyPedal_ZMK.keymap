@@ -1,0 +1,14 @@
+/* my_pedal.keymap */
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+        
+        default_layer {
+            /* 페달 4개에 각각 A, B, C, D 키를 할당 */
+            bindings = <&kp A &kp B &kp C &kp D>;
+        };
+    };
+};
