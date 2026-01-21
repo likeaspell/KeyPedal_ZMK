@@ -1,4 +1,4 @@
-/* my_pedal.overlay */
+/* KeyPedal_ZMK.overlay */
 / {
     chosen {
         zmk,kscan = &kscan0;
