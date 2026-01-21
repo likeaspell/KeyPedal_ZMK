@@ -1,2 +1,2 @@
-config SHIELD_MY_PEDAL
-    def_bool $(shields_list_contains,my_pedal)
+config SHIELD_KeyPedal_ZMK
+    def_bool $(shields_list_contains,KeyPedal_ZMK)
