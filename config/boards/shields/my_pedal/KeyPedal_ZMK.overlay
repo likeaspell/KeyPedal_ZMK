@@ -1,0 +1,18 @@
+/* my_pedal.overlay */
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+    };
+
+    kscan0: kscan_0 {
+        compatible = "zmk,kscan-gpio-direct";
+        
+        input-gpios
+            /* 핀 번호는 nice!nano 핀맵 기준 (P0.06, P0.08 등 예시) */
+            /* 스위치 누르면 High가 되는 반대 로직 적용됨 */
+            = <&gpio0 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+    };
+};
